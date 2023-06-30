@@ -1,21 +1,21 @@
 # Proyecto Morse
 
-Este proyecto utiliza Arduino para implementar un c骴igo que permite parpadear un LED en c骴igo Morse. Para que funcione correctamente, es necesario configurar las credenciales de la red WiFi en un archivo separado llamado "CredencialesWifi.h" ubicado en la carpeta "CodigoArduino/ArduinoMorse". A continuaci髇, se explica c髆o configurar este archivo:
+Este proyecto utiliza Arduino para implementar un c贸digo que permite parpadear un LED en c贸digo Morse. Para que funcione correctamente, es necesario configurar las credenciales de la red WiFi en un archivo separado llamado "CredencialesWifi.h" ubicado en la carpeta "CodigoArduino/ArduinoMorse". A continuaci贸n, se explica c贸mo configurar este archivo:
 
-## Configuraci髇 de las credenciales WiFi
+## Configuraci贸n de las credenciales WiFi
 
-1. En la carpeta "CodigoArduino/ArduinoMorse", crea un nuevo archivo llamado "CredencialesWifi.h".
+1. En la carpeta **[\`CodigoArduino/ArduinoMorse`](/CodigoArduino/ArduinoMorse)** , crea un nuevo archivo llamado "CredencialesWifi.h".
 
 2. Abre el archivo "CredencialesWifi.h" y define las siguientes constantes:
 
 ```cpp
 const char* ssid = "nombre_de_red";
-const char* password = "contrase馻_de_red";
+const char* password = "contrase帽a_de_red";
+````
 
 Guarda y cierra el archivo.
-Aseg鷕ate de que el archivo "CredencialesWifi.h" no se comparta p鷅licamente y que las credenciales de tu red WiFi sean mantenidas de manera segura.
+Aseg煤rate de que el archivo "CredencialesWifi.h"  no se comparta p煤blicamente y que las credenciales de tu red WiFi sean mantenidas de manera segura.
 
-# Instrucciones adicionales
-...
+## Instrucciones adicionales
 
-Puedes copiar y pegar este c骴igo Markdown en tu archivo README.md y adaptarlo seg鷑 tus necesidades. Recuerda guardar los cambios en el archivo despu閟 de realizar las modificaciones.
+Puedes copiar y pegar este c贸digo Markdown en tu archivo README.md y adaptarlo seg煤n tus necesidades. Recuerda guardar los cambios en el archivo despu茅s de realizar las modificaciones.
