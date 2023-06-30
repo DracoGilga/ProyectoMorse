@@ -1,0 +1,85 @@
+﻿<Window x:Class="ProyectoMorse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoMorse"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="354" Width="568"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None" ResizeMode="NoResize"
+        AllowsTransparency="True" Background="#FBFACD">
+
+    <Window.Template>
+        <ControlTemplate TargetType="Window">
+            <Grid>
+                <Border Background="#98EECC" BorderThickness="0" CornerRadius="40"/>
+                <AdornerDecorator>
+                    <ContentPresenter/>
+                </AdornerDecorator>
+            </Grid>
+        </ControlTemplate>
+    </Window.Template>
+
+    <Window.Resources>
+        <Style x:Key="RoundedTextBox" TargetType="TextBox">
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="20">
+                            <ScrollViewer x:Name="PART_ContentHost"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="RoundedButton" TargetType="Button">
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="10"/>
+            <Setter Property="Background" Value="#FBFFDC"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="20">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#A4907C"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </Window.Resources>
+
+    <Grid>
+        <Label x:Name="Tl_Titulo" Content="COMUNICACION NODEMCU ESP8266" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="212" Foreground="Black" MouseDown="TL_Titulo_MouseDown"/>
+
+        <Label Content="ESCRIBE LA INFORMACION A MANDAR A CODIGO MORSE:" HorizontalAlignment="Left" Height="34" Margin="32,39,0,0" VerticalAlignment="Top" Width="484" FontSize="18" Foreground="Black"/>
+        <TextBox x:Name="Tb_mensaje" Style="{StaticResource RoundedTextBox}"
+                     HorizontalAlignment="Center" Height="223" TextWrapping="Wrap"
+                     VerticalAlignment="Top" Width="504" FontSize="24" Background= "#D0F5BE" Foreground="Black" FontWeight="Bold" Margin="0,73,0,0" Text=""/>
+        <Button Content="ENVIAR MENSAJE" Style="{StaticResource RoundedButton}"
+                HorizontalAlignment="Center" Height="40" Margin="0,304,0,0" VerticalAlignment="Top" Width="184" Click="Btn_Enviar" FontSize="18"  FontWeight="Bold"/>
+        <Image HorizontalAlignment="Left" Height="20" Margin="516,10,0,0" VerticalAlignment="Top" Width="20" Source="/Cerrar.png" MouseLeftButtonDown="Image_MouseLeftButtonDown" MouseEnter="Image_MouseEnter"/>
+        <Image HorizontalAlignment="Left" Height="20" Margin="478,10,0,0" VerticalAlignment="Top" Width="20" Source="/Minimizar.png" MouseLeftButtonDown="MinimizeButton_MouseLeftButtonDown" MouseEnter="MinimizeButton_MouseEnter" MouseLeave="MinimizeButton_MouseLeave"/>
+    </Grid>
+</Window>
