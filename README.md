@@ -4,9 +4,9 @@ Este proyecto utiliza Arduino para implementar un código que permite parpadear 
 
 ## Configuración de las credenciales WiFi
 
-1. En la carpeta **[\`CodigoArduino/ArduinoMorse`](/CodigoArduino/ArduinoMorse)** , crea un nuevo archivo llamado "CredencialesWifi.h".
+1. En la carpeta **[\`CodigoArduino/ArduinoMorse`](/CodigoArduino/ArduinoMorse)** , crea un nuevo archivo llamado "CredencialesWifi.cpp".
 
-2. Abre el archivo "CredencialesWifi.h" y define las siguientes constantes:
+2. Abre el archivo "CredencialesWifi.cpp" y define las siguientes constantes:
 
 ```cpp
 const char* ssid = "nombre_de_red";
